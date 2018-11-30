@@ -1,0 +1,489 @@
+@charset "UTF-8";
+
+
+body
+{  
+  margin-top:0px;  
+  margin-bottom:0px;  
+  margin-left: 0px;  
+  margin-right: 0px;
+  background-image: url('../images/background.jpg'); 
+
+} 
+
+p
+{
+	color: #000;
+	line-height: 100px;
+	text-align: center;
+	margin: 0;
+}
+
+/*basic reset*/
+/*browsers have built in values for elements so we'll reset a few things to zero, you can add to this or remove items as needed*/
+
+div,p,body,header,footer,section,article,nav 
+{ 
+	margin-bottom: 0; 
+	padding: 0; 
+
+}	
+
+header
+{
+	background-image:url('../images/header_background.jpg');
+	background-position: bottom;
+	background-position: center;
+	
+
+}
+
+img 
+{ 
+	border: none; /*Remove border if image is a link*/
+	margin: 15px; 
+	padding: 0; 
+	border-radius:15px;
+}
+
+/*html selectors*/
+
+body 
+{
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 12px;
+	color: #333;
+}
+
+
+/*a:link is for not visited(standard unclicked link), 
+a:visited is for visited, and just a applies to both.*/
+/*a will also style anchor links*/
+
+a:link, a:visited 
+{ 
+ 	text-decoration:none; 	
+}
+
+a:hover, a:active 
+{ 
+	text-decoration:none; 
+}
+
+/*hide elements from browser but show for doc outline*/
+
+.hidden
+{
+	display: none;
+}
+
+/*section is block level and no width specidied therefore stretches full screen*/
+.topBar
+{
+	background-color: #66CCFF;
+	height: 20px;
+	width: 960px;
+	margin: auto;
+}
+
+/*Site Container*/
+/*This is essentially a box that we place the whole site in.  
+We center the box using margin 0 auto and give it a fixed width of 920 + 20px + 20px (960px) so it fits on 1024x768 screens.*/
+
+.siteContainer 
+{
+	margin: 0 auto;
+	width: 920px;
+	padding-left: 0;
+	padding-right: 0;
+	background-color: #fff;
+	padding-left: 20px;
+	padding-right: 20px;
+
+}
+
+/*This is a flex container*/
+.mainHeader
+{
+	height: 140px;
+	margin-top: 0px;
+	padding-bottom: 40px;
+	display: flex;
+	flex-direction: row;
+  	justify-content: flex-start;
+	border-bottom: solid 1px #DDD;
+}
+
+/*This is a flex item*/
+#logo
+{
+	margin-left: 15px;
+	margin-top: 30px;
+	width: 200px;
+}
+
+/*This is also a flex item*/
+/*We use margin left auto to send it all the way to the right*/
+.mainNav 
+{
+	margin-top: 45px;
+	margin-left: 240px;
+	width: 500px;
+	height: 25px;
+
+}
+
+.mainNav ul
+{
+	list-style-type: none;
+	padding: 70px;
+}
+
+.mainNav ul li
+{
+	display: inline;
+	font-family:"Krungthep",Georgia,Serif;
+	font-size: 14px;
+	margin-left: 12px;
+}
+
+.mainNav ul li a
+{
+	color: #66ccff;
+	padding: 4px;
+}
+
+.mainNav ul li a:hover
+{
+	color: #fff;
+	background-color: #66ccff;
+	padding: 4px;
+	border-radius:15px;
+}
+
+
+
+footer
+{
+	
+}
+
+.mainFooter 
+{
+
+	height: 150px;
+	display: flex;
+	flex-direction: row;
+  	justify-content: flex-start;
+  	background-image: url('../images/footer_background.jpg');
+  	/*background-repeat: no-repeat;*/
+  	background-position: bottom;
+}
+
+.footerNav 
+{
+	margin-top: 0;
+	width: 500px;
+	display: inline;
+	font-family:"Arial",Georgia,Serif;
+	font-size: 14px;
+	margin-left: 25px;
+}
+
+.footerNav ul
+{
+	list-style-type: none;
+	padding: 55px;
+}
+
+.footerNav ul li
+{
+	display: inline;
+	font-family:"Arial",Georgia,Serif;
+	font-size: 14px;
+	font-weight: bold;
+	margin-left: auto;
+}
+
+.footerNav ul li a
+{
+	color: #2073a8;
+	padding: 10px;
+}
+
+.footerNav ul li a:hover
+{
+	text-decoration: underline;
+}
+
+.copyRight 
+{
+	margin-top: 25px;
+	margin-left: auto;
+	width: 310px;
+	padding: 0;
+}
+
+
+/*index.html content*/
+#contentAreaBig
+{
+	margin-top: 10px;
+	margin-bottom: 0;
+	border-bottom: solid 1px #DDD;
+	padding-bottom: 40px;
+	height: 300px;
+	background-image: url(../images/banner.jpg);
+	background-size: 900px, 300px;
+	background-repeat: no-repeat;
+}
+
+/*Get rid of this, here just to give different height*/
+#contentAreaBig p 
+{
+	line-height: 80px;
+	padding-top: 75px;
+	margin-left: 400px;
+	font-size: 72px;
+	font-family:"Phosphate",Georgia,Serif;
+}
+
+#font1
+{
+	color: orange;
+	
+}
+
+#font2
+{
+	color: pink;
+}
+
+.clubDetail
+{
+	margin-top: 40px;
+	border-bottom: solid 1px #DDD;
+	padding-bottom: 40px;
+	display: flex;
+	flex-direction: row;
+  	justify-content: space-between;
+}
+
+/*Get rid of this, here just to give different height*/
+.clubDetail p
+{
+	margin-bottom: 15px;
+	background-color: #fff;
+	color: #666;
+	font-size: 16px;
+	margin-top: 20px;
+	line-height: 22px;
+	/* opentional to justify text */
+	/*justify-content: justify;*/
+	padding-bottom: 15px; 
+	background-color: #ddeff7;
+
+
+}
+
+.contentImg 
+{
+	width: 280px;
+	background-color: #ddeff7;
+}
+
+.contentBox
+{
+	color: #eee;
+	background-color: #66ccff;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-left: 10px;
+	padding-bottom: 5px;
+	font-family: "DIN Condensed",Georgia,Serif;
+	font-size: 24px;
+	margin-bottom: 50px;
+	text-align: center;
+	border-radius: 15px;
+}
+
+.contentBox:hover
+{
+	color: #ddd;
+	box-shadow: 10px 10px 5px rgba(100,100,100,.5) inset;
+}
+
+
+.clubDetail p
+{
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
+
+/*gallery page*/
+#bodyGallery 
+{
+	border-bottom: solid 1px #DDD;
+}
+
+#bodyGallery h2
+{
+	text-align: center;
+	font-family:"Herculanum",Georgia,Serif;
+	font-size: 36px;
+	color: #66ccff;
+	font-weight: bold;
+}
+
+#bodyGallery p
+{
+	text-align: center;
+	font-family:"Papyrus",Georgia,Serif;
+	font-size: 24px;
+	margin-top: -40px;
+	margin-bottom: -20px;
+}
+
+
+
+#more:hover
+{
+	text-decoration: underline;
+}
+.align1
+{
+	margin-left: 30px;
+	margin-top: 0px;
+	
+	padding-bottom: 0px;
+	display: flex;
+	flex-direction: row;
+  	justify-content: flex-start;
+}
+
+#align2
+{
+	margin-left: 30px;
+	margin-top: 0px;
+	
+	padding-bottom: 0px;
+	display: flex;
+	flex-direction: row;
+  	justify-content: flex-start;
+
+}
+
+
+
+/*Contact page*/
+#mainContact h2
+{
+	text-align: center;
+	font-family:"Herculanum",Georgia,Serif;
+	font-size: 36px;
+	color: #66ccff;
+	font-weight: bold;
+
+}
+
+#contactBody 
+{
+	margin-top: 40px;
+	border-bottom: solid 1px #DDD;
+	padding-bottom: 40px;
+	display: flex;
+	flex-direction: row;
+  	justify-content: flex-start;
+}
+
+/*Get rid of this, here just to give different height to promo*/
+#contactBody p 
+{
+	line-height: 630px;
+}
+
+#contactLeft 
+{
+	width: 440px;
+	margin-left: auto;
+	border-right: solid 1px #DDD;
+	background-image: url(../images/contactleft_background.jpg);
+	background-size: 400px 640px;
+	background-position: bottom center;
+	background-repeat: no-repeat;
+}
+
+#contactLeft h3, #contactRight h3
+{
+	font-size: 24px;
+	font-family:"silom",Georgia,Serif;
+}
+
+input, textarea
+{
+	display: block;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 10px;
+	width: 300px;
+	height: 8px;
+	background-color: #efefef;
+	border: 1px solid #999;
+
+	
+}
+
+#comments
+{
+	width: 300px;
+	height: 80px;
+}
+
+#submit
+{
+	width: 75px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-color: #66ccff;
+	height: 30px;
+	color: #fff;
+}
+
+#submit:hover
+{
+	box-shadow: 10px 10px 5px rgba(100,100,100,.5) inset;
+}
+
+#contactRight
+{
+	margin-left: auto;
+	width: 440px;
+}
+
+
+ #contactRight ul
+ {
+ 	list-style-type: none;
+ 	padding: 0;
+ 	line-height: 25px;
+ 	margin-bottom: 20px;
+ }
+
+ #socialMedia
+ {
+ 	margin-left: 25px;
+	margin-top: 40px;
+	
+	padding-bottom: 40px;
+	display: flex;
+	flex-direction: row;
+  	justify-content: flex-start;
+ }
+
+ #socialMedia h3
+{
+	margin-bottom: 0;
+}
